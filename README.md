@@ -12,6 +12,12 @@ Imagine you are a **data analyst** at an **e-commerce logistics company**. The c
 - **Comprehensively evaluate the company’s delivery performance.**
 - **Analyze the key factors impacting delivery efficiency** and **provide data-driven recommendations** to support future strategic improvements.
 
+> 📊The ecom_logistics_db.bacpac can be downloaded [here](https://drive.google.com/file/d/1y3K9Xfnw5U071UXy_VwFf0s8EGuDerse/view?usp=sharing).
+
+> 📊The SQL queries utilized to inspect and perform quality checks can be found [here](https://github.com/nqtien-020913/ecom_logistics_analysis/blob/main/SQL_ecom_logistic_cleaning.sql).
+
+> 📊Targeted SQL queries regarding various business questions can be found [here](https://github.com/nqtien-020913/ecom_logistics_analysis/blob/main/SQL_ecom_logistic_analyzing.sql).
+
 ## 2. Data Structure and Related Metrics
 
 ### 2.1. Data Structure
@@ -89,9 +95,11 @@ Overall, the company's delivery performance remains suboptimal, and there has be
 
 </div>
 
+> 📊Targeted SQL queries regarding various business questions can be found [here](https://github.com/nqtien-020913/ecom_logistics_analysis/blob/main/SQL_ecom_logistic_analyzing.sql).
+
 ## 4. Insight Deep-Dive
 
-After an in-depth analysis of the data, we identified **two key issues** behind the company's poor performance and lack of growth: **(1) No strategy to attract new customers**, and **(2) High customer churn** (as shown in Figure 4).
+After an in-depth analysis of the data, we identified **two key issues** behind the company's poor performance and lack of growth: **(1) No strategy to attract new customers**, and **(2) High customer churn** (as shown in **Figure 4**).
 
 <div align="center">
   
@@ -154,7 +162,88 @@ There is **insufficient data** to analyze **packaging and transit issues** in de
 
 </div>
 
+3. **The company's delivery operations are inefficient:** Orders with longer delivery time requirements (**high time_required**) are prioritized for early delivery (**very low delivering_time**), while orders with tighter deadlines (**low time_required**) are delayed (**very high delivering_time**). As a result, on-time orders (**n_orders_ontime**) are delivered too early, whereas late orders (**n_orders_late**) experience significant delays. This pattern is clearly illustrated in **Figure 8** below.
 
+<div align="center">
+  
+  ![decrease 13% (4)](https://github.com/user-attachments/assets/8b8d1f17-4afd-465e-b273-20320f1983d7)
 
+  **Figure 8:** Comparison of time_required and delivering_time for on-time and late orders.
 
+</div>
+
+### 4.2. In-Depth Analysis of Product Quality
+
+The following product quality issues need to be addressed:
+- Poor product appearance
+- Products not matching descriptions
+- Extremely low product quality
+
+<div align="center">
+  
+  ![image](https://github.com/user-attachments/assets/65bb1474-0870-4359-94c0-21797015b2a1)
+
+  **Figure 9:** Customer Negative Feedback
+
+</div>
+
+These issues are most prevalent in the Fashion, Beauty, and Home categories, which are also the company's top revenue-generating product lines. The company must pay close attention to customer feedback to develop better product strategies (see **Figure 10**).
+
+<div align="center">
+  
+  ![image](https://github.com/user-attachments/assets/4ca15b45-b662-410d-bc92-fc01336313c2)
+
+  **Figure 10:** Distribution of Negative Customer Feedback by Product Category
+
+</div> 
+
+### 4.3/. Analysis of Customer Service
+
+While customer service issues account for a small percentage of total orders (around 3.1%), improving this area will enhance the company's overall service quality and create a long-term competitive advantage.
+
+### 4.4/. Analysis of Order Volume Risk Management
+
+The overall efficiency of the delivery process is significantly impacted when order volumes surge **2-3 times** higher than usual.
+
+<div align="center">
+  
+  ![decrease 13% (6)](https://github.com/user-attachments/assets/3a35cd66-4538-4b98-8b67-756e16bdd768)
+  
+  **Figure 11:** Trends of Key Metrics from May 2022 to December 2023
+
+</div> 
+
+During November, December 2022, and early January 2023, order volumes spiked due to major shopping events. November saw high demand during **"Double-Eleven" Day (11/11)** and **Black Friday sales (see Figure 12)**. In December and January, orders surged in preparation for Lunar New Year.
+
+<div align="center">
+  
+  ![image](https://github.com/user-attachments/assets/d28bec1f-0a4d-4fb5-83b4-624bf5533735)
+
+  **Figure 12:** Order Volume Fluctuations in November 2022
+
+</div> 
+
+During these **peak periods**, consumer purchasing activity increases sharply. However, the company lacked **strategies and risk management solutions** to handle the demand surges. As a result, nearly all key delivery performance indicators deteriorated significantly.
+
+## 5. Recommendation
+
+### 5.1. Enhancing Delivery Efficiency
+
+Optimizing all stages of the overall delivery process:
+- **Packaging Process:** Conduct training sessions for staff to improve both speed and quality in packaging.
+- **Transportation Process:** Improve or redesign sorting procedures, optimize delivery routes, and, if necessary, expand the fleet to increase transportation capacity.
+- **Last-Mile Delivery:** Prioritize orders with tighter delivery deadlines, optimize order allocation to shippers, train delivery personnel on efficient routes, and implement motivation programs to boost their performance.
+
+### 5.2. Improving Product Quality
+
+Collaborate with stores to identify product issues and support them in enhancing product quality to better align with customer needs and expectations.
+
+### 5.3. Risk Management
+- Develop risk management strategies, especially for peak seasons when order volumes surge 2-3 times higher than usual.
+- Build a data analytics system to forecast order spikes in advance.
+- Implement solutions for temporary staffing to handle short-term order surges efficiently.
+
+### 5.4. Enhancing Customer Service
+
+Although customer service is not a critical issue at present, it will be a key factor in long-term customer retention. The company should proactively consider improvements in this area for future growth.
 

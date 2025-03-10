@@ -217,7 +217,7 @@ During November, December 2022, and early January 2023, order volumes spiked due
 
 <div align="center">
   
-  ![image](https://github.com/user-attachments/assets/d28bec1f-0a4d-4fb5-83b4-624bf5533735)
+  ![image](https://github.com/user-attachments/assets/b1d41ff5-eba5-41f1-8f10-7bd169d2689b)
 
   **Figure 12:** Order Volume Fluctuations in November 2022
 

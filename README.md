@@ -117,7 +117,7 @@ The customer retention rate remained low, ranging only from **13% to 21%** acros
 Several factors contribute to poor retention, with four critical reasons negatively impacting customer experience and brand loyalty (See **Figure 5**):
   - The delivery process is not optimized
   - Product quality issues
-  - Subpar customer service
+  - Poor customer service
   - Inability to manage sudden order surges (**2–3x normal volume**) effectively (see **Section 4.4** for details).
  
 <div align="center">
